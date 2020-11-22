@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\middleware\CheckUserId;
+use App\Helpers\ExternalApiHelper;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,6 +13,7 @@ use App\Http\middleware\CheckUserId;
 |
 */
 
+Route::get('/','CampusGist@practice');
 
 Route::view('/signin','CampusGistSignIn');
 Route::view('/showPost','CampusGistPost');

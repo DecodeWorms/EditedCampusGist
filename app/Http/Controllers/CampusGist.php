@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
+use App\Helpers\ExternalApiHelper;
+use App\Helpers\CheckName;
 use Validator;
 use Cookie;
 use App;
@@ -320,5 +322,12 @@ public function searchedProfilePostComments(Request $request){
         }
         
     }
+
+
+    public function practice(CheckName $result){
+        return $result->confirmName();
+    }
+
+    
     
 }
